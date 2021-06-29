@@ -1,5 +1,4 @@
 module.exports = {
-  reactStrictMode: true,
   images: {
     donmains: [
       "links.papareact.com",
