@@ -4,7 +4,7 @@
 
 @layer components {
   .icon {
-    @apply hidden xl:inline p-1 h-10 w-10 bg-gray-200 rounded-full text-gray-700
+    @apply m-1 p-1 h-10 w-10 bg-gray-200 rounded-full text-gray-700
     cursor-pointer hover:bg-gray-300;
   }
   .inputIcon {
