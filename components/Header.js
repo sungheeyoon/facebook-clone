@@ -68,7 +68,7 @@ function Header() {
         <p className="whitespace-nowrap font-semibold pr-3">
           {session.user.name}
         </p>
-        <div className="hidden sm:inline-flex ">
+        <div className="hidden xl:inline-flex ">
           <FontAwesomeIcon className="icon" icon={faEllipsisH} size="lg" />
           <FontAwesomeIcon className="icon" icon={faCommentDots} size="lg" />
           <FontAwesomeIcon className="icon" icon={faBell} size="lg" />
