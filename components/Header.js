@@ -11,6 +11,7 @@ import {
   faBell,
   faChevronDown,
 } from "@fortawesome/free-solid-svg-icons";
+import Image from "next/image";
 import { faFacebook } from "@fortawesome/free-brands-svg-icons";
 import HeaderIcon from "./HeaderIcon";
 import { signOut, useSession } from "next-auth/client";
@@ -56,7 +57,7 @@ function Header() {
       {/* Right */}
       <div className="flex items-center sm:space-x-2 justify-end">
         {/* Profile pic */}
-        <img
+        <Image
           onClick={signOut}
           className="rounded-full cursor-pointer"
           src={session.user.image}
@@ -65,10 +66,11 @@ function Header() {
           layout="fixed"
           alt=""
         />
-        <p className="whitespace-nowrap font-semibold pr-3">
-          {session.user.name}
-        </p>
+
         <div className="hidden xl:inline-flex ">
+          <p className="whitespace-nowrap font-semibold pr-3">
+            {session.user.name}
+          </p>
           <FontAwesomeIcon className="icon" icon={faEllipsisH} size="lg" />
           <FontAwesomeIcon className="icon" icon={faCommentDots} size="lg" />
           <FontAwesomeIcon className="icon" icon={faBell} size="lg" />

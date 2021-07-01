@@ -4,13 +4,14 @@ import {
   faCommentAlt,
   faShareAlt,
 } from "@fortawesome/free-solid-svg-icons";
+import Image from "next/image";
 
 function Post({ name, message, email, postImage, image, timestamp }) {
   return (
     <div className="flex flex-col">
       <div className="p-5 bg-white mt-5 rounded-t-2xl shadow-sm">
         <div className="flex items-center space-x-2">
-          <img
+          <Image
             className="rounded-full"
             src={image}
             width={40}
@@ -34,7 +35,7 @@ function Post({ name, message, email, postImage, image, timestamp }) {
 
       {postImage && (
         <div className="relative h-56 md:h-96 bg-white">
-          <img src={postImage} objectFit="cover" layout="fill" />
+          <Image src={postImage} objectFit="cover" alt="" layout="fill" />
         </div>
       )}
       {/* Footer of post */}

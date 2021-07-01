@@ -6,14 +6,18 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "deploy": "gh-pages -d build",
+    "predeploy": "yarn run build"
   },
+  "homepage": "https://sungheeyoon.github.io/facebook-clone",
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.35",
     "@fortawesome/free-brands-svg-icons": "^5.15.3",
     "@fortawesome/free-solid-svg-icons": "^5.15.3",
     "@fortawesome/react-fontawesome": "^0.1.14",
     "firebase": "^8.6.8",
+    "gh-pages": "^3.2.3",
     "next": "11.0.1",
     "next-auth": "^3.27.1",
     "react": "17.0.2",

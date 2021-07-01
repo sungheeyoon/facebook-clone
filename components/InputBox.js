@@ -4,6 +4,7 @@ import { faVideo, faCamera, faSmile } from "@fortawesome/free-solid-svg-icons";
 import { useRef, useState } from "react";
 import { db, storage } from "../firebase";
 import firebase from "firebase";
+import Image from "next/image";
 function InputBox() {
   const [session] = useSession();
   const inputRef = useRef(null);
@@ -76,7 +77,7 @@ function InputBox() {
       text-gray-500 font-medium mt-6"
     >
       <div className="flex space-x-4 p-4 items-center">
-        <img
+        <Image
           className="rounded-full"
           src={session.user.image}
           width={40}
@@ -103,7 +104,13 @@ function InputBox() {
           hover:brightness-110 transition duration-150 
           transform hover:scale=105 cursor-pointer"
           >
-            <img className="h-10 object-contain" src={imageToPost} alt="" />
+            <Image
+              className="h-10 object-contain"
+              src={imageToPost}
+              alt=""
+              width={40}
+              height={40}
+            />
             <p></p>
           </div>
         )}

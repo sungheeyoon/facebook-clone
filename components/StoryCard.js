@@ -2,22 +2,26 @@ import Image from "next/image";
 function StoryCard({ name, src, profile }) {
   return (
     <div
-      className="relative cursor-pointer overflow-x p-3 
+      className="relative h-14 w-14 md:h-20 md:w-20 
+      lg:h-64 lg:w-36 cursor-pointer overflow-x p-3 
      transition duration-200 transform ease-in hover:scale-105 
       hover:animate-pulse "
     >
-      <img
-        style={{ height: "40px", width: "40px", layout: "fixed" }}
+      <Image
         className="absolute opacity-0 lg:opacity-100 
-            rounded-full z-50 top-10 left-4 object-cover"
+            rounded-full z-50 top-10"
         src={profile}
+        alt=""
+        width={40}
+        height={40}
+        layout="fixed"
+        objectFit="cover"
       />
-      <img
-        style={{ layout: "fill" }}
+      <Image
         className="object-cover filter brightness-75
-        rounded-full lg:rounded-3xl h-14 w-14 md:h-20 md:w-20 
-     lg:h-56 lg:w-32"
+        rounded-full lg:rounded-3xl"
         src={src}
+        alt=""
         layout="fill"
       />
       <p

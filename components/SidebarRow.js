@@ -7,7 +7,7 @@ function SidebarRow({ src, icon, title }) {
     hover:bg-gray-200 rounded-full cursor-pointer"
     >
       {src && (
-        <img
+        <Image
           className="rounded-full"
           src={src}
           width={30}
@@ -16,7 +16,9 @@ function SidebarRow({ src, icon, title }) {
           alt=""
         />
       )}
-      {icon && <FontAwesomeIcon className=" text-blue-500" icon={icon} />}
+      {icon && (
+        <FontAwesomeIcon className=" text-blue-500" icon={icon} size="lg" />
+      )}
       <p className="hidden sm:inline-flex font-medium">{title}</p>
     </div>
   );

@@ -1,11 +1,9 @@
 import StoryCard from "./StoryCard";
-
 const stories = [
   {
     name: "Waren Buffet",
-    src: "https://cdn.cnn.com/cnnnext/dam/assets/180829220147-26-warren-buffett-super-169.jpg",
-    profile:
-      "https://img-cdn.inc.com/image/upload/w_1920,h_1080,c_fill/images/panoramic/GettyImages-849879976_453790_hejec3.jpg",
+    src: "/images/warenSrc.jpg",
+    profile: "/images/warenProfile.jpg",
   },
   {
     name: "Elon Musk",
